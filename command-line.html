@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Командная строка</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f5f5f5;
+      }
+
+      .command-line {
+        width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .prompt {
+        color: #999;
+        margin: 0;
+      }
+
+      #command-input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+        font-family: monospace;
+      }
+    </style>
+</head>
+<body>
+  <div class="command-line">
+    <p class="prompt">user@localhost:~$</p>
+    <input type="text" id="command-input" placeholder="Type your command here"/>
+  </div>
+
+  <script>
+    document
+    .getElementById("command-input")
+    .addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            sendCommand();
+        }
+    });
+
+    function sendCommand() {
+    var commandInput = document.getElementById("command-input").value;
+        console.log("Отправлена команда: " + commandInput);
+        document.getElementById("command-input").value = "";
+      }
+  </script>
+</body>
+</html>
