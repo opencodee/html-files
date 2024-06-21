@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Banner</title>
+    <style>
+      #cookie-banner {
+        position: fixed;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        max-width: 400px;
+        width: calc(100% - 40px); /* ширина будет 100% минус 40px (20px слева и 20px справа) */
+        bottom: 20px;
+        left: 20px;
+      }
+
+      #cookie-banner p {
+        font-family: sans-serif;
+        margin: 0;
+      }
+
+      #accept-cookies-btn {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        #cookie-banner {
+          width: calc(100% - 40px);
+          max-width: none;
+          bottom: 0;
+          left: 0;
+          max-height: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cookie-banner">
+      <p>
+        Мы используем файлы cookie для улучшения вашего опыта. Продолжая
+        использовать наш сайт, вы соглашаетесь на использование файлов cookie.
+        <button id="accept-cookies-btn">Принять</button>
+      </p>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var cookieBanner = document.getElementById("cookie-banner");
+        var acceptCookiesBtn = document.getElementById("accept-cookies-btn");
+
+        function hideCookieBanner() {
+          cookieBanner.style.display = "none";
+        }
+
+        acceptCookiesBtn.addEventListener("click", hideCookieBanner);
+      });
+    </script>
+  </body>
+</html>
