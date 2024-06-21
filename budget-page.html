@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семейный Бюджет</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            color: #333;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .budget {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+        }
+        .description {
+            font-size: 1.5rem;
+            margin: 10px 0 20px 0;
+            text-align: center;
+        }
+        .members {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .member {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 10px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .amount {
+            font-size: 1.2rem;
+            color: #007bff;
+        }
+        .purchase-button {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        .purchase-button:hover {
+            background: #0056b3;
+        }
+        .purchase-form {
+            display: none;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .purchase-form h2 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .purchase-form input, .purchase-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .purchase-form button {
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .purchase-form button:hover {
+            background: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .budget {
+                font-size: 2.5rem;
+            }
+            .description {
+                font-size: 1.2rem;
+            }
+            .name, .amount {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="budget">Общий Бюджет: 1,150,000₽</p>
+        <p class="description">Семейный бюджет и вклады каждого члена семьи</p>
+    </div>
+    <div class="members">
+        <div class="member">
+            <span class="name">Алексей:</span>
+            <span class="amount">1,050,000₽</span>
+        </div>
+        <div class="member">
+            <span class="name">Марина:</span>
+            <span class="amount">40,000₽</span>
+        </div>
+        <div class="member">
+            <span class="name">Иван:</span>
+            <span class="amount">30,000₽</span>
+        </div>
+        <div class="member">
+            <span class="name">Ольга:</span>
+            <span class="amount">30,000₽</span>
+        </div>
+    </div>
+    <button class="purchase-button" onclick="toggleForm()">Запрос на Покупку</button>
+    <div class="purchase-form">
+        <h2>Запрос на Покупку</h2>
+        <form>
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="number" name="amount" placeholder="Сумма" required>
+            <input type="text" name="reason" placeholder="Причина" required>
+            <button type="submit">Отправить Запрос</button>
+        </form>
+    </div>
+    <script>
+        function toggleForm() {
+            const form = document.querySelector('.purchase-form');
+            form.style.display = form.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

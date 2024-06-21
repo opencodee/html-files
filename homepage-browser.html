@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Стартовая страница браузера</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('photo.png'); /* Путь к изображению */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .time {
+            font-size: 48px;
+        }
+        .date {
+            font-size: 24px;
+        }
+        .search-bar {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            width: 500px;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+        }
+        .search-bar button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #ffc400;
+            color: white;
+            cursor: pointer;
+        }
+        .links {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 50px;
+            padding: 15px 0;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .links a:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .settings {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .weather {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .weather img {
+            width: 20px;
+        }
+        @media (max-width: 600px) {
+            .search-bar input {
+                width: 80%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="time">19:45</div>
+        <div class="date">воскресенье, 26 мая</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Введите запрос или адрес">
+            <button>Поиск</button>
+        </div>
+        <div class="weather">
+            <i class="ri-cloud-line"></i>
+            <div>18°</div>
+        </div>
+        <div class="links">
+            <a href="https://yandex.ru">Яндекс</a>
+            <a href="https://mega.nz">Mega</a>
+            <a href="https://127.0.0.1">127.0.0.1</a>
+            <a href="https://yandex.ru/pogoda">Погода</a>
+        </div>
+    </div>
+    <div class="settings">
+        <i class="ri-settings-2-line"></i>
+    </div>
+</body>
+</html>

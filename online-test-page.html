@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн Тест</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            background-color: #f9f9f9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .options li:hover {
+            background-color: #e0e0e0;
+        }
+        .options li.disabled {
+            pointer-events: none;
+        }
+        .options li.correct {
+            background-color: #c8e6c9;
+            color: #388e3c;
+            animation: correctAnimation 0.5s forwards;
+        }
+        .options li.incorrect {
+            background-color: #ffcdd2;
+            color: #d32f2f;
+            animation: incorrectAnimation 0.5s forwards;
+        }
+        @keyframes correctAnimation {
+            from { background-color: #f9f9f9; }
+            to { background-color: #c8e6c9; }
+        }
+        @keyframes incorrectAnimation {
+            from { background-color: #f9f9f9; }
+            to { background-color: #ffcdd2; }
+        }
+        .status {
+            margin-top: 20px;
+        }
+        .status span {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .status .correct {
+            background-color: #c8e6c9;
+            color: #388e3c;
+        }
+        .status .incorrect {
+            background-color: #ffcdd2;
+            color: #d32f2f;
+        }
+        .status .remaining {
+            background-color: #ffecb3;
+            color: #fbc02d;
+        }
+        .navigation {
+            margin-top: 20px;
+        }
+        .navigation span {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .navigation span.answered {
+            background-color: #c8e6c9;
+        }
+        .navigation span.incorrect {
+            background-color: #ffcdd2;
+        }
+        .navigation span:hover {
+            background-color: #bdbdbd;
+        }
+        .finish-button {
+            display: block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .finish-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question"></div>
+        <ul class="options"></ul>
+        <button class="finish-button">Завершить тест</button>
+        <div class="status">
+            <span class="correct">Правильно: 0</span>
+            <span class="incorrect">Неправильно: 0</span>
+            <span class="remaining">Осталось вопросов: 3</span>
+        </div>
+        <div class="navigation">
+            <span data-question="0">1</span>
+            <span data-question="1">2</span>
+            <span data-question="2">3</span>
+        </div>
+    </div>
+    <script>
+        const questions = [
+            {
+                "text": "Сколько дней в неделе?",
+                "image": "",
+                "options": ["5", "6", "7", "8"],
+                "answer": "7"
+            },
+            {
+                "text": "Какое самое высокое здание в мире?",
+                "image": "",
+                "options": ["Шанхайская башня", "Эмпайр Стейт Билдинг", "Бурдж-Халифа", "Тайпэй 101"],
+                "answer": "Бурдж-Халифа"
+            },
+            {
+                "text": "Какое самое глубокое озеро в мире?",
+                "image": "",
+                "options": ["Байкал", "Каспийское", "Титикака", "Виктория"],
+                "answer": "Байкал"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let correctCount = 0;
+        let incorrectCount = 0;
+        let remainingCount = questions.length;
+        const questionContainer = document.querySelector('.question');
+        const optionsContainer = document.querySelector('.options');
+        const correctStatus = document.querySelector('.status .correct');
+        const incorrectStatus = document.querySelector('.status .incorrect');
+        const remainingStatus = document.querySelector('.status .remaining');
+        const navigationContainer = document.querySelector('.navigation');
+        const finishButton = document.querySelector('.finish-button');
+
+        let answeredQuestions = [];
+
+        function loadQuestion(index) {
+            const question = questions[index];
+            questionContainer.innerHTML = `
+                <h2>Вопрос ${index + 1}: ${question.text}</h2>
+                ${question.image ? `<img src="${question.image}" alt="Изображение">` : ''}
+            `;
+            optionsContainer.innerHTML = '';
+            question.options.forEach((option, i) => {
+                const li = document.createElement('li');
+                li.textContent = option;
+                li.addEventListener('click', () => handleAnswer(option, question.answer, index));
+                optionsContainer.appendChild(li);
+
+                if (answeredQuestions[index] && answeredQuestions[index].selectedOption === option) {
+                    li.classList.add(answeredQuestions[index].isCorrect ? 'correct' : 'incorrect');
+                }
+            });
+
+            if (answeredQuestions[index]) {
+                optionsContainer.querySelectorAll('li').forEach(li => li.classList.add('disabled'));
+            }
+        }
+
+        function handleAnswer(selected, correct, index) {
+            if (!answeredQuestions[index]) {
+                const isCorrect = selected === correct;
+                if (isCorrect) {
+                    correctCount++;
+                    correctStatus.textContent = `Правильно: ${correctCount}`;
+                    navigationContainer.children[index].classList.add('answered');
+                } else {
+                    incorrectCount++;
+                    incorrectStatus.textContent = `Неправильно: ${incorrectCount}`;
+                    navigationContainer.children[index].classList.add('incorrect');
+                }
+                remainingCount--;
+                remainingStatus.textContent = `Осталось вопросов: ${remainingCount}`;
+                optionsContainer.querySelectorAll('li').forEach(li => li.classList.add('disabled'));
+
+                answeredQuestions[index] = { selectedOption: selected, isCorrect: isCorrect };
+
+                const selectedOptionElement = Array.from(optionsContainer.children).find(li => li.textContent === selected);
+                selectedOptionElement.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+                setTimeout(() => {
+                    if (index + 1 < questions.length) {
+                        currentQuestion = index + 1;
+                        loadQuestion(currentQuestion);
+                    }
+                }, 1000);
+            }
+        }
+
+        function finishTest() {
+            const totalQuestions = questions.length;
+            alert(`Тест завершен! Вы правильно ответили на ${correctCount} из ${totalQuestions} вопросов.`);
+        }
+
+        navigationContainer.querySelectorAll('span').forEach((span, index) => {
+            span.addEventListener('click', () => {
+                currentQuestion = index;
+                loadQuestion(currentQuestion);
+            });
+        });
+
+        finishButton.addEventListener('click', finishTest);
+
+        loadQuestion(currentQuestion);
+    </script>
+</body>
+</html>
