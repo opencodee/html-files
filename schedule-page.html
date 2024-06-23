@@ -1,0 +1,3777 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Расписание групповых занятий</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      select {
+        padding: 8px;
+        font-size: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Расписание групповых занятий</h2>
+      <div>
+        <label for="course">Выберите курс:</label>
+        <select id="course">
+          <option value="all">Все курсы</option>
+          <option value="course1">Курс 1</option>
+          <option value="course2">Курс 2</option>
+          <option value="course3">Курс 3</option>
+          <option value="course4">Курс 4</option>
+        </select>
+        <label for="group">Выберите группу:</label>
+        <select id="group">
+          <option value="all">Все группы</option>
+          <option value="group1">Группа 1</option>
+          <option value="group2">Группа 2</option>
+          <option value="group3">Группа 3</option>
+          <option value="group4">Группа 4</option>
+          <option value="group5">Группа 5</option>
+          <option value="group6">Группа 6</option>
+          <option value="group7">Группа 7</option>
+        </select>
+      </div>
+      <table id="schedule">
+        <thead>
+          <tr>
+            <th>Время</th>
+            <th>Группа</th>
+            <th>Класс</th>
+            <th>Предмет</th>
+            <th>Преподаватель</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tbody>
+          <tr data-course="course1" data-group="group1">
+            <td colspan="6"><b>Понедельник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group1">
+            <td colspan="6"><b>Вторник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group1">
+            <td colspan="6"><b>Среда</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group1">
+            <td colspan="6"><b>Четверг</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group1">
+            <td colspan="6"><b>Пятница</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group1">
+            <td colspan="6"><b>Суббота</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group1">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group2">
+            <td colspan="6"><b>Понедельник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td colspan="6"><b>Вторник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td colspan="6"><b>Среда</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td colspan="6"><b>Четверг</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td colspan="6"><b>Пятница</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td colspan="6"><b>Суббота</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group2">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group3">
+            <td colspan="6"><b>Понедельник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td colspan="6"><b>Вторник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td colspan="6"><b>Среда</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td colspan="6"><b>Четверг</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td colspan="6"><b>Пятница</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td colspan="6"><b>Суббота</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group3">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group4">
+            <td colspan="6"><b>Понедельник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td colspan="6"><b>Вторник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td colspan="6"><b>Среда</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td colspan="6"><b>Четверг</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td colspan="6"><b>Пятница</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td colspan="6"><b>Суббота</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group4">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group5">
+            <td colspan="6"><b>Понедельник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td colspan="6"><b>Вторник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td colspan="6"><b>Среда</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td colspan="6"><b>Четверг</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td colspan="6"><b>Пятница</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td colspan="6"><b>Суббота</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group5">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group6">
+            <td colspan="6"><b>Понедельник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td colspan="6"><b>Вторник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td colspan="6"><b>Среда</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td colspan="6"><b>Четверг</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td colspan="6"><b>Пятница</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td colspan="6"><b>Суббота</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group6">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr data-course="course1" data-group="group7">
+            <td colspan="6"><b>Понедельник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td colspan="6"><b>Вторник</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td colspan="6"><b>Среда</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td colspan="6"><b>Четверг</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td colspan="6"><b>Пятница</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td colspan="6"><b>Суббота</b></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>08:30 - 9:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>09:25 - 10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>10:20 - 11:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>11:15 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>12:30 - 13:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>13:25 - 14:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>14:20 - 15:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>15:15 - 16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>16:20 - 17:05</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>17:15 - 18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>18:10 - 18:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr data-course="course1" data-group="group7">
+            <td>19:05 - 19:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var courseSelect = document.getElementById("course");
+        var groupSelect = document.getElementById("group");
+
+        courseSelect.addEventListener("change", updateSchedule);
+        groupSelect.addEventListener("change", updateSchedule);
+
+        function updateSchedule() {
+          var selectedCourse = courseSelect.value;
+          var selectedGroup = groupSelect.value;
+
+          var rows = document.querySelectorAll("#schedule tbody tr");
+          rows.forEach(function (row) {
+            var course = row.getAttribute("data-course");
+            var group = row.getAttribute("data-group");
+
+            if (
+              (selectedCourse === "all" || selectedCourse === course) &&
+              (selectedGroup === "all" || selectedGroup === group)
+            ) {
+              row.style.display = "table-row";
+            } else {
+              row.style.display = "none";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
