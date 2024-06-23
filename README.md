@@ -6,3 +6,4 @@
 5. [homepage-browser.html](https://github.com/opencodee/html-files/blob/main/homepage-browser.html) - Стартовая страница браузера. Для корректного отображения требуется прописать путь к фоновому изображению в блоке ```style```:```background-image: url('photo.png'); /* Путь к изображению */```
 6. [online-test-page.html](https://github.com/opencodee/html-files/blob/main/online-test-page.html) - Шаблон онлайн теста. Вопросы вставляются автоматически, поле навигации в ручную.
 7. [cookie-banner.html](https://github.com/opencodee/html-files/blob/main/cookie-banner.html) - Баннер файлов Cookie.
+8. [schedule-page.html](https://github.com/opencodee/html-files/blob/main/schedule-page.html) - Страница расписание для групп. Фильтр для конкретной группы.
